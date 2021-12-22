@@ -122,24 +122,6 @@ func (a arr) indexOf(el string) int {
 	return -1
 }
 
-func (a arr) hasMatch(patterns ...string) bool {
-
-	for _, el := range a {
-		match := true
-
-		for _, p := range patterns {
-			m, _ := regexp.MatchString(p, el)
-			match = match && m
-		}
-
-		if match {
-			return true
-		}
-	}
-
-	return false
-}
-
 func (a arr) countOccurrence(element string) int {
 	occurrences := 0
 

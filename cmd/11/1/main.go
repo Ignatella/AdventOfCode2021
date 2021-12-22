@@ -33,7 +33,7 @@ func steps(n int, grid [][]int) int {
 func step(grid [][]int) int {
 	flashes := 0
 	for i, r := range grid {
-		for j, _ := range r {
+		for j := range r {
 			if grid[i][j] < 10 {
 				grid[i][j]++
 			}
@@ -45,7 +45,7 @@ func step(grid [][]int) int {
 	}
 
 	for i, r := range grid {
-		for j, _ := range r {
+		for j := range r {
 			if grid[i][j] > 9 {
 				grid[i][j] = 0
 			}

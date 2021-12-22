@@ -175,7 +175,7 @@ func is0(num string, s *segmentNames) bool {
 	if st.contains(n[0]) &&
 		st.contains(n[1]) &&
 		st.contains(n[2]) &&
-		st.contains(n[3]) == false &&
+		!st.contains(n[3]) &&
 		st.contains(n[4]) &&
 		st.contains(n[5]) &&
 		st.contains(n[6]) {
@@ -186,11 +186,7 @@ func is0(num string, s *segmentNames) bool {
 }
 
 func is1(num string, s *segmentNames) bool {
-	if len(num) == 2 {
-		return true
-	}
-
-	return false
+	return len(num) == 2
 }
 
 func is2(num string, s *segmentNames) bool {
@@ -198,11 +194,11 @@ func is2(num string, s *segmentNames) bool {
 	st := str(num)
 
 	if st.contains(n[0]) &&
-		st.contains(n[1]) == false &&
+		!st.contains(n[1]) &&
 		st.contains(n[2]) &&
 		st.contains(n[3]) &&
 		st.contains(n[4]) &&
-		st.contains(n[5]) == false &&
+		!st.contains(n[5]) &&
 		st.contains(n[6]) {
 		return true
 	}
@@ -215,10 +211,10 @@ func is3(num string, s *segmentNames) bool {
 	st := str(num)
 
 	if st.contains(n[0]) &&
-		st.contains(n[1]) == false &&
+		!st.contains(n[1]) &&
 		st.contains(n[2]) &&
 		st.contains(n[3]) &&
-		st.contains(n[4]) == false &&
+		!st.contains(n[4]) &&
 		st.contains(n[5]) &&
 		st.contains(n[6]) {
 		return true
@@ -228,11 +224,10 @@ func is3(num string, s *segmentNames) bool {
 }
 
 func is4(num string, s *segmentNames) bool {
-	if len(num) == 4 {
+	return len(num) == 4
+	{
 		return true
 	}
-
-	return false
 }
 
 func is5(num string, s *segmentNames) bool {
@@ -241,9 +236,9 @@ func is5(num string, s *segmentNames) bool {
 
 	if st.contains(n[0]) &&
 		st.contains(n[1]) &&
-		st.contains(n[2]) == false &&
+		!st.contains(n[2]) &&
 		st.contains(n[3]) &&
-		st.contains(n[4]) == false &&
+		!st.contains(n[4]) &&
 		st.contains(n[5]) &&
 		st.contains(n[6]) {
 		return true
@@ -258,7 +253,7 @@ func is6(num string, s *segmentNames) bool {
 
 	if st.contains(n[0]) &&
 		st.contains(n[1]) &&
-		st.contains(n[2]) == false &&
+		!st.contains(n[2]) &&
 		st.contains(n[3]) &&
 		st.contains(n[4]) &&
 		st.contains(n[5]) &&
@@ -270,19 +265,11 @@ func is6(num string, s *segmentNames) bool {
 }
 
 func is7(num string, s *segmentNames) bool {
-	if len(num) == 3 {
-		return true
-	}
-
-	return false
+	return len(num) == 3
 }
 
 func is8(num string, s *segmentNames) bool {
-	if len(num) == 7 {
-		return true
-	}
-
-	return false
+	return len(num) == 7
 }
 
 func is9(num string, s *segmentNames) bool {
@@ -293,7 +280,7 @@ func is9(num string, s *segmentNames) bool {
 		st.contains(n[1]) &&
 		st.contains(n[2]) &&
 		st.contains(n[3]) &&
-		st.contains(n[4]) == false &&
+		!st.contains(n[4]) &&
 		st.contains(n[5]) &&
 		st.contains(n[6]) {
 		return true
